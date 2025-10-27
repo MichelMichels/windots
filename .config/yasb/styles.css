@@ -28,17 +28,17 @@
 }
 
 * {
-  font-size: 14px;
+  font-size: px;
   color: var(--text);
   font-weight: 600;
-  font-family: "JetBrainsMono NF";
+  font-family: "JetBrainsMono NFP";
   margin: 0;
   padding: 0;
 }
 .yasb-bar {
   padding: 5px 15px;
   margin: 0;
-  background-color: var(--base);
+  /* background-color: var(--base); */
 }
 .widget {
   padding: 0 12px;
@@ -62,7 +62,7 @@
 }
 .home-widget .icon {
   color: var(--blue);
-  padding: 0 5px 0 0;
+  padding: 0;
   font-size: 14px;
 }
 .home-widget .icon:hover {
@@ -276,9 +276,21 @@
 
 /* Taskbar (currently active apps) */
 
+.taskbar-widget {
+  padding: 0;
+}
+.taskbar-widget .app-container {
+  padding: 0 8px;
+}
+
+.taskbar-widget .app-container.foreground {
+  background-color: #24273a;
+  border-radius: 15px;
+  height: 35px;
+}
+
 .taskbar-widget .app-icon {
   font-size: 12px;
-  padding: 0 0 0 10px;
 }
 
 /* Wifi */
@@ -288,13 +300,15 @@
   border-radius: 15px;
   height: 35px;
 }
+
 .wifi-widget .widget-container .icon {
   font-size: 14px;
   color: var(--yellow);
-  padding: 0 5px 0 10px;
+  padding: 0 0 0 10px;
 }
+
 .wifi-widget .widget-container .label {
-  padding: 0 10px 0 0;
+  padding: 0 10px;
 }
 
 /* Volume */

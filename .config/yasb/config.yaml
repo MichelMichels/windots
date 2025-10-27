@@ -38,9 +38,9 @@ widgets:
       label: "<span>\ue62a</span>"
       menu_list:
         - { title: "User Home", path: "~" }
-        - { title: "Downloads", path: "C:\\Users\\miche\\Downloads" }
-        - { title: "Documents", path: "C:\\Users\\miche\\Documents" }
-        - { title: "Pictures", path: "C:\\Users\\miche\\Pictures" }
+        - { title: "Download", path: "C:\\Users\\ashis\\Downloads" }
+        - { title: "Documents", path: "C:\\Users\\ashis\\Documents" }
+        - { title: "Pictures", path: "C:\\Users\\ashis\\Pictures" }
       system_menu: true
       power_menu: true
       blur: true
@@ -144,9 +144,9 @@ widgets:
         classes: []
       container_padding:
         top: 0
-        left: 5
+        left: 0
         bottom: 0
-        right: 5
+        right: 0
   battery:
     type: "yasb.battery.BatteryWidget"
     options:
@@ -157,13 +157,16 @@ widgets:
   wifi:
     type: "yasb.wifi.WifiWidget"
     options:
-      label: "<span> {wifi_icon} </span> {wifi_name}"
-      label_alt: "{wifi_name} {wifi_strength}%"
+      label: "<span>{wifi_icon}</span>{wifi_name}"
+      label_alt: "{ip_addr}"
       update_interval: 5000
       callbacks:
         on_left: "exec explorer ms-availablenetworks:"
         on_middle: "do_nothing"
         on_right: "toggle_label"
+      ethernet_label: "<span>{wifi_icon}</span>{ip_addr}"
+      ethernet_label_alt: "<span>{wifi_icon}</span>{ip_addr}"
+      ethernet_icon: "\ueba9"
       wifi_icons:
         [
           "\udb82\udd2e",
@@ -227,7 +230,7 @@ widgets:
     type: "yasb.wallpapers.WallpapersWidget"
     options:
       label: "<span>\udb80\udee9</span>"
-      image_path: "C:\\Users\\miche\\windots\\walls"
+      image_path: "C:\\Users\\ashis\\windots\\walls"
       change_automatically: false
       update_interval: 60
       gallery:
